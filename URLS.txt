@@ -1,0 +1,6 @@
+https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/proxy.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/https.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt
