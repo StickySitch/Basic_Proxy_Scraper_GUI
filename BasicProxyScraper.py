@@ -16,9 +16,7 @@ def proxyScraper():
     #Opens and reads users URL Addresses
     with open(values["-IMPORT-"], 'r') as f:
         URLList = f.readlines() 
-    ##Opens and reads all proxies already saved
-    #with open("Proxy Saves\AllProxies.txt") as f:
-        #AllProxies = f.read()
+
 
 
     #Starts looping through the list of URLS provided; Grabbing the HTML, parsing, and then searching for proxies.
@@ -62,42 +60,7 @@ def ProxyCheck(ip):
         window["-TABLE-"].Update(values=table_content)
 
 
-        
-       ### Checking for protocol type and appending to the corresponding list
-
-        #if 'http' in list(groupAnswer.items())[0][1]:
-        #    httpProxiesFull.append(groupAnswer)
-        #    httpProxies.append(ip)
-#
-#
-        #
-        #if 'socks4' in list(groupAnswer.items())[0][1]:
-        #    sock4ProxiesFull.append(groupAnswer)
-        #    sock4Proxies.append(ip)
-#
-        #
-        #if 'socks5' in list(groupAnswer.items())[0][1]:
-        #    sock5ProxiesFull.append(groupAnswer)
-        #    sock5Proxies.append(ip)
-#
-#
-#
-        #
-        #if 'Anonymous' in list(groupAnswer.items())[1][1]:
-        #    anonProxiesFull.append(groupAnswer)
-        #    anonProxies.append(ip)
-#
-        #
-        #if 'Elite' in list(groupAnswer.items())[1][1]:
-        #    eliteProxiesFull.append(groupAnswer)
-        #    eliteProxies.append(ip)
-#
-        #if 'Transparent' in list(groupAnswer.items())[1][1]:
-        #    transparentProxiesFull.append(groupAnswer)
-        #    transparentProxies.append(ip)
-
-
-        #print('\n' + 'Checked: ' + ip)
+    
   
             
 # Function for multithreading using concurrent.futures.ThreadPoolExecutor
@@ -114,6 +77,7 @@ def runThread():
 right_layout = [
         [sg.Button("Start", visible=True)],
         [sg.FileBrowse("Import URLs", key="-IMPORT-")],
+
         [sg.Text("Thread Count:"),
         sg.Input(key="-THREAD-INPUT-", size=(5,5)),
         sg.Button("Sumbit", visible=False, bind_return_key=True)],
@@ -122,7 +86,7 @@ right_layout = [
 ]
 
 layout = [[
-    sg.Frame("TEST", [[
+    sg.Frame("Information Station", [[
     sg.Table(values = table_content,
     headings= ["IP:PORT", "PROTOCOL", "ANONYMITY", "TIMEOUT", "COUNTRY", "COUNTRY_CODE"],
     expand_x = True,
@@ -132,7 +96,7 @@ layout = [[
 
     ]]),
     
-    sg.Multiline(key="-TEXTBOX-", size=(30,10))
+    #sg.Multiline(key="-TEXTBOX-", size=(30,10))
 ]]
 
 window = sg.Window("Basic Proxy Scraper", layout, finalize=True)
