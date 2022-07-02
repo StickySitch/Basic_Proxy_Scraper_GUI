@@ -1,6 +1,4 @@
-from ast import arg
 import re
-from turtle import update
 import PySimpleGUI as sg
 import requests
 from bs4 import BeautifulSoup
@@ -82,7 +80,9 @@ right_layout = [
         sg.Input(key="-THREAD-INPUT-", size=(5,5)),
         sg.Button("Sumbit", visible=False, bind_return_key=True)],
 
-        [sg.Checkbox("Quality Check", default=True, change_submits=True, enable_events=True, key="-Checkbox-")]
+        [sg.Checkbox("Quality Check", default=True, change_submits=True, enable_events=True, key="-Checkbox-")],
+        
+        [sg.Button("Save Proxies", key="-SAVE-")]
 ]
 
 layout = [[
