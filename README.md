@@ -21,7 +21,7 @@ Use your desired IDE to run BasicProxyScraper.py OR run ```py BasicProxyScraper.
 
 
 > **Note:**
-> If you've decided to go with option 2, make sure you have a virtual envirnment setup with the correct dependencies.
+> If you've decided to go with option 2, make sure you have a virtual environment setup with the correct dependencies.
 
 
 ### Step 2: Thread Count
@@ -39,7 +39,7 @@ With the proxy quality checker disabled, no results will be displayed to the tab
 
 
 ### Saving proxies
-SimplY click the ```Save txt``` or ```Save JSON``` button. The file will be output to the current directory your program is in.
+Simply click the ```Save txt``` or ```Save JSON``` button. The file will be output to the current directory your program is in.
 
 ![Save](https://github.com/StickySitch/Basic_Proxy_Scraper_GUI/blob/main/README_Images/nav_bps_exe_save.png)
 
