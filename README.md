@@ -24,14 +24,14 @@ Use your desired IDE to run BasicProxyScraper.py OR run ```py BasicProxyScraper.
 > If you've decided to go with option 2, make sure you have a virtual envirnment setup with the correct dependencies.
 
 
-### Step 2: 
+### Step 2: Thread Count
 Input your desired thread count.
 
-### Step 3:
+### Step 3: Scraping Source
 Import the list of URLs you 
 
-### Step 4: 
-If you would like your proxies checked for quality, make sure the "quality check" box has its check mark. 
+### Step 4: Quality Check
+If you would like your proxies checked for quality, make sure the ```quality check``` box has its check mark. 
 With the proxy quality checker disabled, no results will be displayed to the table for now. 
 
 ![Start program](https://github.com/StickySitch/Basic_Proxy_Scraper_GUI/blob/main/README_Images/nav_bps_exe_start.gif)
@@ -39,7 +39,7 @@ With the proxy quality checker disabled, no results will be displayed to the tab
 
 
 ### Saving proxies
-SimplY click the "Save txt" or "Save JSON" button. The file will be output to the current directory your program is in.
+SimplY click the ```Save txt``` or ```Save JSON``` button. The file will be output to the current directory your program is in.
 
 ![Save](https://github.com/StickySitch/Basic_Proxy_Scraper_GUI/blob/main/README_Images/nav_bps_exe_save.png)
 
