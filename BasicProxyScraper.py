@@ -11,8 +11,8 @@ import json
 uncheckedProxies = []
 table_content = []
 
-def JSON_Convert(lists):
-    JSON_Output = json.dumps(lists, separators=[",", ":"])
+def JSON_Convert(lists, separators):
+    JSON_Output = json.dumps(lists, separators=separators)
     with open('json_save.json', 'w') as output:
         output.write(JSON_Output)
 
@@ -134,6 +134,8 @@ while True:
     file_path = values["-IMPORT-"]
     workerCountInput = window["-THREAD-INPUT-"].get()
     
+    if event == sg.WIN_CLOSED:
+        break
 
     if event == "Start":
         proxyScraper()
@@ -143,18 +145,24 @@ while True:
             # Needed to avoid running on the main thread; pysimplegui issue.
             threading.Thread(target=runThread, daemon=True).start()
 
+    # If save txt button clicked, saves as .txt file using
+    # Text_convert() function      
+    if values["-Checkbox-"] == True: 
+        if event == "-SAVE-TEXT-":
+            Text_Convert(proxies_list)
+
+    elif values["-Checkbox-"] == False:
+        if event == "-SAVE-TEXT-":
+            Text_Convert(uncheckedProxies)
+
     # If save json button clicked, saves as .json file using
     # JSON_convert() function
-    if event == "-SAVE-JSON-":
-        JSON_Convert(checked_Dict)
-    # If save txt button clicked, saves as .txt file using
-    # Text_convert() function
-    if event == "-SAVE-TEXT-":
-        Text_Convert(proxies_list)
+    if values["-Checkbox-"] == True: 
+        if event == "-SAVE-JSON-":
+            JSON_Convert(checked_Dict, separators=[",",":"])
+
   
 
-    if event == sg.WIN_CLOSED:
-        break
 
        
 
