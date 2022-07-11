@@ -28,7 +28,7 @@ Use your desired IDE to run BasicProxyScraper.py OR run ```py BasicProxyScraper.
 Input your desired thread count.
 
 ### Step 3: Scraping Source
-Import the list of URLs you 
+Import the list of URLs
 
 ### Step 4: Quality Check
 If you would like your proxies checked for quality, make sure the ```quality check``` box has its check mark. 
